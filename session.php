@@ -8,7 +8,7 @@ $session=mysqli_query($conn,$sql);
 $row=mysqli_fetch_array($session,MYSQLI_ASSOC);
 $login_session=$row['name'];
  
-if(!isset($_SESSION['login_user']))   //if(!isset($login_session))
+if(!isset($_SESSION['login_user']))
 {
     header("location:index.php");
 }

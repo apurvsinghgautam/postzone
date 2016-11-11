@@ -27,10 +27,6 @@ if ($_SERVER['REQUEST_METHOD']=="POST" && !empty($_POST['name']) && !empty($_POS
 		echo "Registered Successfully";
 	}
 }
-else
-{
-	echo "All the fields are Mandatory";
-}
 mysqli_close($conn);
 function test_input($data)
 {

@@ -24,15 +24,15 @@ session_start();
 	<div class="form">
   		<div class="thumbnail"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png"/></div>
   			<form class="register-form" method="POST" action="register.php">
-          <input type="text" name="name" placeholder="yourname"/>
-    			<input type="text" name="mobile" placeholder="mobile"/>
-   	 			<input type="password" name="password" placeholder="password"/>
+          <input type="text" name="name" placeholder="yourname" required="required"/>
+    			<input type="text" name="mobile" placeholder="mobile" required="required"/>
+   	 			<input type="password" name="password" placeholder="password" required="required"/>
     			<button type="submit" name="submit" class="btn btn-primary">Register</button>
     			<p class="message">Already registered? <a href="#">Sign In</a></p>
   			</form>
   				<form class="login-form" method="POST" action="login.php">
-    				<input type="text" name="username" placeholder="username"/>
-    				<input type="password" name="password" placeholder="password"/>
+    				<input type="text" name="username" placeholder="username" required="required" />
+    				<input type="password" name="password" placeholder="password" required="required" />
     				<button type="submit" name="submit" class="btn btn-primary">Login</button>
     				<p class="message">Not registered? <a href="#">Create an account</a></p>
             <h1 class="message">OR</h1>

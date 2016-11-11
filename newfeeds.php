@@ -33,9 +33,9 @@ include("session.php");
 								<h1>Postzone</h1>
 							</div>
 						</div>
-					</div>
+					</div>ō
 					<div class="col-md-6">
-						<h1 id="demo"></h1>
+						<h1><?php echo $_SESSION['login_user'];?></h1>
 						<a href="logout.php"><button type="button" class="btn btn-primary">Logout</button></a>
 					</div>
 				</div>
@@ -56,25 +56,21 @@ include("session.php");
 			</div>
 		</div>	
 	</div>
-
-	<div class="article">
-		<div class="container">
-			<div class="row">
-				<div class="block">
-					<h1 id="demo1"></h1>
-					<p id="demo2"></p>	
-				</div>
-			</div>	
-		</div>
-	</div>
-		
-	<div class="footer">
-		<div class="container">
-			<div class="row">
-				<h2>All rights are Resevered.</h2>
-				<p>Developed by :-</p>
-			</div>
-		</div>
-	</div>	
+	<?php 
+    include('db.php');
+	$sql="SELECT newfeed,nm FROM post";
+	$ret=mysqli_query($conn,$sql);
+	while ($row=mysqli_fetch_array($ret,MYSQL_ASSOC))
+	{?>
+    <div class="article">
+	<div class="container">
+	<div class="block">
+		<div class="row">
+		<?php echo "{$row['nm']} <hr>";
+		      echo "{$row['newfeed']}";?></div></div></div></div>
+	<?php } 
+	mysqli_free_result($ret);
+    mysqli_close($conn);
+    include('footer.php');?>
 </body>
 </html>
