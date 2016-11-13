@@ -23,20 +23,12 @@ include("session.php");
 		<div class="container">
 			<div class="row">
 				<div class="header">
-					<div class="icon col-md-6">
-						<div class="row">
-							<div class="col-xs-3 col-sm-2-5">
-								<img src="https://lh3.googleusercontent.com/aYbdIM1abwyVSUZLDKoE0CDZGRhlkpsaPOg9tNnBktUQYsXflwknnOn2Ge1Yr7rImGk=w300"/>
-								<span class="glyphicon glyphicon-option-vertical"></span>	
-							</div>
-							<div class="col-xs-8">
-								<h1>Postzone</h1>
-							</div>
-						</div>
-					</div>ō
-					<div class="col-md-6">
-						<h1><?php echo $_SESSION['login_user'];?></h1>
-						<a href="logout.php"><button type="button" class="btn btn-primary">Logout</button></a>
+					<div class="col-md-4">
+						<h1>Postzone</h1>
+					</div>
+					<div class="col-md-8">
+						<h2><?php echo $_SESSION['login_us'];?></h2>
+						<a href="logot.php"><button type="button" class="btn btn-primary">Logout</button></a>
 					</div>
 				</div>
 			</div>
@@ -56,18 +48,24 @@ include("session.php");
 			</div>
 		</div>	
 	</div>
+
 	<?php 
     include('db.php');
-	$sql="SELECT newfeed,nm FROM post";
+	$sql="SELECT newfeed,nm FROM post ORDER BY id DESC";
 	$ret=mysqli_query($conn,$sql);
 	while ($row=mysqli_fetch_array($ret,MYSQL_ASSOC))
 	{?>
     <div class="article">
-	<div class="container">
-	<div class="block">
-		<div class="row">
-		<?php echo "{$row['nm']} <hr>";
-		      echo "{$row['newfeed']}";?></div></div></div></div>
+		<div class="container">
+			<div class="block">
+				<div class="row">
+					<?php echo "<h1>{$row['nm']} <hr></h1>";
+					      echo "<p>{$row['newfeed']}</p>";?>
+		      	
+		      	</div>
+		    </div>
+		</div>
+	</div>
 	<?php } 
 	mysqli_free_result($ret);
     mysqli_close($conn);

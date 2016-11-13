@@ -10,7 +10,7 @@ session_start();
 if ($_SERVER['REQUEST_METHOD']=="POST")
 {
 	$newfeed=test_input($_POST['feed']);
-	$nm=$_SESSION['login_user'];
+	$nm=$_SESSION['login_us'];
     
 	$sql="INSERT INTO post (newfeed,nm)
 			VALUES ('$newfeed','$nm')";    
@@ -30,7 +30,6 @@ function test_input($data)
 	$data=htmlspecialchars($data); //Remove html tags
 	return $data;
 }
-mysqli_free_result($retpost);
 mysqli_close($conn);
 ?>
 </body>

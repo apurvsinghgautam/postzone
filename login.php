@@ -1,9 +1,9 @@
 <?php 
 include('db.php');
 session_start();
-if($_SERVER['REQUEST_METHOD']=="POST" && !empty($_POST['username']) && !empty($_POST['password']))
+if($_SERVER['REQUEST_METHOD']=="POST" && !empty($_POST['mobile']) && !empty($_POST['password']))
 {
-	$user=mysqli_real_escape_string($conn,$_POST['username']);
+	$user=mysqli_real_escape_string($conn,$_POST['mobile']);
 	$pass=mysqli_real_escape_string($conn,$_POST['password']);
 	$sql = "SELECT id FROM logintb WHERE mobile = '$user' and password = '$pass'";
 	$fetch=mysqli_query($conn,$sql);

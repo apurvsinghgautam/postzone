@@ -1,7 +1,8 @@
-<?php
+<?php 
 session_start();
-if(session_destroy())
-{
-	header("Location: index.php");
-}
+session_unset();
+    $_SESSION['FBID'] = NULL;
+    $_SESSION['FULLNAME'] = NULL;
+    $_SESSION['EMAIL'] =  NULL;
+header("Location: index.php");      
 ?>

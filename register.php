@@ -1,12 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Postzone - Registration</title>
+	<link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/main2.css">
+</head>
+<body>
+<div class="registration">
 <?php
 include('db.php');
 session_start();
 ?>
-<!DOCTYPE html>
-<html>
-<head></head>
-<body>
-<center>
 <?php
 if ($_SERVER['REQUEST_METHOD']=="POST" && !empty($_POST['name']) && !empty($_POST['mobile']) && !empty($_POST['password']))
 {
@@ -24,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST" && !empty($_POST['name']) && !empty($_POS
 	}
 	else
 	{
-		echo "Registered Successfully";
+		echo "</br>Registered Successfully with Postzone";
 	}
 }
 mysqli_close($conn);
@@ -37,8 +41,12 @@ function test_input($data)
 }
 ?>
 <br><br><br><br>
-Go to <a href="index.php">Login</a> Page
-</center>
+<p>Go to <a href="index.php">Login</a> Page.</p>
+</br></br></br>
+<p>Share Your Thoughts Now on Postzone...</p>
+
+
+</div>
 </body>
 </html>
 
