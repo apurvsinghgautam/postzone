@@ -6,30 +6,24 @@
 	margin: 0px 0px;
 	height: 35px auto;
 }
-.profile .header .icon{}
-
-.profile .header img{
-	margin: 5px auto;
-	padding: 0px;
-	width: 45px;
-}
-.profile .header h1{
+.profile .header {
 	padding: 0px;
 	margin: 8px auto;
-	color: #273746;
+	color: #5D0E8E;
 	font size: 18px;
-	font-family: sans-serif;
+	font-family: cursive;
 }
+
 .profile .header h2{
 	color: #2980B9;
 	font-size: 14px;
-	margin:  4px;
+	margin: 4px 80px;
 	font-family: cursive;
 	text-align: right;
 
 }
 .profile .header button{
-	margin: 1px 80%;
+	margin: 4px 80%;
 }
 .feed{
 	background:url(../img/background.jpg) no-repeat; background-size:cover;
@@ -39,6 +33,7 @@
 
 }
 .feed .form{}
+
 .feed label{
 	color: orange;
 	font-family: cursive;
@@ -62,9 +57,9 @@
 	margin-bottom: 5px;
 	border: 2px solid #a1a1a1;
     padding: 10px 40px;
-    background: #dddddd;
+    background: #FFC8B7;
     width: 100%;
-    border-radius: 12px 12px;
+    border-radius: 12px 30px;
 }
 .article .block h1{
 	color: red;
@@ -83,18 +78,31 @@
 	margin-top: 0px;
 }
 .footer{
-	background:url(../img/background.jpg) no-repeat; background-size:cover;
+	background-color: #AD024E;
 	width: 100%;
-	height: 90px;
+	height: 105px;
 }
 .footer h2{
 	font-family: cursive;
 	font-size: 16px;
 	text-align: center;
+	color: #B3FBF3;
 }
 .footer p{
 	font-family: cursive;;
 	font-size: 14px;
 	text-align: right;
+	color: #B3FBF3;
 	margin-right: 16px;
+}
+.registration
+{
+	background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd69LgDO_CMXk6HeiMd_8yV0MSnpVbz7VreUcftCGxVUx2Pxkh) no-repeat; background-size:cover;
+	text-align: center;
+	font-family: sans-serif;
+	font-style: italic;
+	font-size: 24px;
+	color: #1980B6;
+	margin: 0px;
+	height: 100
 }

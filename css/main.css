@@ -17,8 +17,10 @@
 .container .info h1 {
   margin: 0 0 15px;
   padding: 0;
-  font-size: 36px;
-  font-weight: 300;
+  font-size: 40px;
+  font-family: cursive;
+  font-style: italic;
+  font-weight: 400;
   color: #1a1a1a;
 }
 .container .info span {
@@ -34,7 +36,7 @@
 }
 body {
    background:url(../img/background.jpg) no-repeat; background-size: cover;
-  font-family: "Roboto", sans-serif;
+  font-family: cursive;;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
