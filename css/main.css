@@ -109,6 +109,9 @@ body:before {
   transition: all 0.3 ease;
   cursor: pointer;
 }
+.form .fbbutton {
+  size: 45px;
+}
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
