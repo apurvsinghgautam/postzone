@@ -7,14 +7,10 @@ include("session.php");
 	<title>Postzone- NewFeed</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-signin-client_id" content="216713098226-vvusplddpue9sqpln2sjgbtra28mk90p.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/client:platform.js?onload=renderButton" async defer></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="google-signin-client_id" content="536051103891-0mleul9knbaklc60evjivm98c37qvsc4.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/client:platform.js" async defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css"/>
-    <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
-	<link type="text/javascript" href="css/bootstrap-3.3.7-dist/js/bootstrap.min.js"/>
-    <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main2.css">
 
 </head>
@@ -53,20 +49,21 @@ include("session.php");
     include('db.php');
 	$sql="SELECT newfeed,nm FROM post ORDER BY id DESC";
 	$ret=mysqli_query($conn,$sql);
-	while ($row=mysqli_fetch_array($ret,MYSQL_ASSOC))
+	if(mysqli_num_rows($ret)){
+	while ($row=mysqli_fetch_array($ret))
 	{?>
     <div class="article">
 		<div class="container">
 			<div class="block">
 				<div class="row">
-					<?php echo "<h1>{$row['nm']} <hr></h1>";
-					      echo "<p>{$row['newfeed']}</p>";?>
+					<?php echo "<h1>".$row['nm']." <hr></h1>";
+					      echo "<p>".$row['newfeed']."</p>";?>
 		      	
 		      	</div>
 		    </div>
 		</div>
 	</div>
-	<?php } 
+	<?php } }
 	mysqli_free_result($ret);
     mysqli_close($conn);
     include('footer.php');?>
