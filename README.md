@@ -14,9 +14,18 @@ Database is maintained using MySql.</br>
 
 # Requirement
 
+<<<<<<< HEAD
 	HTML</br>
 	CSS</br>
 	Javascript</br>
 	Bootstrap</br>
 	PHP</br>
 	MySql</br>
+=======
+HTML</br>
+CSS</br>
+Javascript</br>
+Bootstrap</br>
+PHP</br>
+MySql</br>
+>>>>>>> origin/master
