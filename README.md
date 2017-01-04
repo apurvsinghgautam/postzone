@@ -11,3 +11,12 @@ User is able to enter text to create post - "create a post " button.</br>
 These posts should be viewed in a wall. once user login, wall should appear.</br>
 Based on chosen languages, static contents as well as dynamic contents on the Website should change accordingly. It should be available in the settings screen of the website.</br>
 Database is maintained using MySql.</br>
+
+# Requirement
+
+	HTML</br>
+	CSS</br>
+	Javascript</br>
+	Bootstrap</br>
+	PHP</br>
+	MySql</br>
