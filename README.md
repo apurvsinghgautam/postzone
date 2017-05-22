@@ -14,7 +14,6 @@ Database is maintained using MySql.</br>
 
 # Requirement
 
-HEAD</br>
 HTML</br>
 CSS</br>
 Javascript</br>
