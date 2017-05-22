@@ -1,8 +1,8 @@
 <?php
-$servername="sql6.freemysqlhosting.net";
-$username="sql6148986";
-$password="dTIg8HKfaC";
-$db_name="sql6148986";
+$servername="localhost";
+$username="root";
+$password="";
+$db_name="postzone";
 
 $conn=mysqli_connect($servername,$username,$password,$db_name);
 
